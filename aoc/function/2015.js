@@ -1,38 +1,29 @@
 const {
-    getFiles
-} = require('./commun');
+    day1
+} = require('./2015/1');
   
+const {
+    day2
+} = require('./2015/2');
+  
+const {
+    day3
+} = require('./2015/3');
+  
+const {
+    day4
+} = require('./2015/4');
 
-function day1(year, day, part) {
-
-    file = getFiles(year, day, part)
-    fileTrain = "()())"
-    
-    let floor = 0
-    let firtEnter = false
-
-    file.split("").map(
-        (value,index) =>
-        {
-            if (value === "(") {
-                floor += 1
-            } else {
-                floor -= 1
-            }
-
-            if (floor === -1 && !firtEnter) {
-                basement = index+1
-                firtEnter = true
-            }
-
-        }
-    )
-
-    return [floor, basement]
-}
-   
+const {
+    day5
+} = require('./2015/5');
+  
 
 module.exports = {
     day1,
+    day2,
+    day3, 
+    day4,
+    day5,
 };
   
