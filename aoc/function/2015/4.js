@@ -3,7 +3,7 @@ const {
 } = require('../commun');
 const crypto = require('crypto');
    
-function day4(year, day) {
+function year2015day4(year, day) {
 
     data = getFiles(year, day)
 
@@ -31,6 +31,6 @@ function day4(year, day) {
 
 
 module.exports = {
-    day4, 
+    year2015day4, 
 };
   

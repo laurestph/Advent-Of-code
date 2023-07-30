@@ -25,7 +25,7 @@ function isNiceStringPart2(str) {
   }
   
 
-function day5(year, day) {
+function year2015day5(year, day) {
 
     datas = getFiles(year, day).split('\n')
 
@@ -49,6 +49,6 @@ function day5(year, day) {
 
 
 module.exports = {
-    day5, 
+    year2015day5, 
 };
   

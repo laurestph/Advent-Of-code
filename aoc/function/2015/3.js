@@ -28,7 +28,7 @@ function day3Function(datas, houseDeliver) {
     return houseDeliver
 }
    
-function day3(year, day) {
+function year2015day3(year, day) {
 
     datas = getFiles(year, day).split("")
 
@@ -68,6 +68,6 @@ function day3(year, day) {
 
 
 module.exports = {
-    day3, 
+    year2015day3, 
 };
   

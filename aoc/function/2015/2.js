@@ -2,7 +2,7 @@ const {
     getFiles
 } = require('../commun');
 
-function day2(year, day) {
+function year2015day2(year, day) {
 
     file = getFiles(year, day)
     fileTest = '2x3x4\n1x1x10'
@@ -32,6 +32,6 @@ function day2(year, day) {
 }
 
 module.exports = {
-    day2
+    year2015day2
 };
   

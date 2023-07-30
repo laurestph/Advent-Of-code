@@ -2,11 +2,17 @@ const express = require('express');
 const app = express();
 const browserSync = require('browser-sync').create();
 const {
-  day1,
-  day2,
-  day3,
-  day4,
-  day5,
+  year2015day1,
+  year2015day2,
+  year2015day3,
+  year2015day4,
+  year2015day5,
+  year2015day6,
+  year2015day7,
+  year2015day8,
+  year2015day9,
+  year2015day10,
+  year2015day11,
 } = require('./aoc/function/2015');
 
 // Définition du répertoire des vues
@@ -25,29 +31,37 @@ app.get('/:year/:day', (req, res) => {
     case "2015":
       switch(day){
         case "1":
-          result = day1(year, day)
-          result1 = result[0]
-          result2 = result[1]
+          [result1, result2]  = year2015day1(year, day)
           break;
         case "2":
-          result = day2(year, day)
-          result1 = result[0]
-          result2 = result[1]
+          [result1, result2]  = year2015day2(year, day)
           break;
         case "3":
-          result = day3(year, day)
-          result1 = result[0]
-          result2 = result[1]
+          [result1, result2]  = year2015day3(year, day)
           break;
         case "4":
-          result = day4(year, day)
-          result1 = result[0]
-          result2 = result[1]
+          [result1, result2]  = year2015day4(year, day)
           break;
         case "5":
-          result = day5(year, day)
-          result1 = result[0]
-          result2 = result[1]
+          [result1, result2]  = year2015day5(year, day)
+          break;
+        case "6":
+          [result1, result2]  = year2015day6(year, day)
+          break;
+        case "7":
+          [result1, result2]  = year2015day7(year, day)
+          break;
+        case "8":
+          [result1, result2]  = year2015day8(year, day)
+          break;
+        case "9":
+          [result1, result2]  = year2015day9(year, day)
+          break;
+        case "10":
+          [result1, result2]  = year2015day10(year, day)
+          break;
+        case "11":
+          [result1, result2]  = year2015day11(year, day)
           break;
       }
       break;

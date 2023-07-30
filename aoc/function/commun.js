@@ -12,7 +12,25 @@ function getFiles(year, day, train=false) {
     return content
 }
 
+function minusculeAlphabet(){
+    // Obtenir les lettres de l'alphabet en minuscules
+    alphabet = []
+    for (let i = 97; i <= 122; i++) {
+        const letter = String.fromCharCode(i);
+        alphabet.push(letter)
+    }
+    return alphabet
+}
+
+const clearConsole = () => {
+    console.clear(); // Efface complètement la console (si disponible)
+    process.stdout.write('\x1Bc'); // Efface la console en ajoutant des lignes vides
+};
+  
+
 module.exports = {
-    getFiles
+    getFiles, 
+    minusculeAlphabet,
+    clearConsole
 };
   

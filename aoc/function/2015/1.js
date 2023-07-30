@@ -3,7 +3,7 @@ const {
 } = require('../commun');
   
 
-function day1(year, day) {
+function year2015day1(year, day) {
 
     file = getFiles(year, day)
     fileTrain = "()())"
@@ -32,6 +32,6 @@ function day1(year, day) {
 }
 
 module.exports = {
-    day1
+    year2015day1
 };
   
