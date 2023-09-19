@@ -1,33 +1,38 @@
+function genererCoordonneesDiagonales(n) {
+    const coordonnees = [];
+  
+    for (let i = 0; i < n; i++) {
+      for (let j = 0; j <= i; j++) {
+        coordonnees.push([i - j, j]);
+      }
+    }
+  
+    return coordonnees;
+  }
+  
 function year2015day25(year, day) {
 
     let row = 2981
     let column = 3075
 
-    let begin = 1
-    let table = [[begin]]
-    let x = 0
-    let y = 0
+    // Exemple d'utilisation :
+    const n = 2*column+1;  // Vous pouvez choisir la taille de la séquence
+    const sequence = genererCoordonneesDiagonales(n);
 
-    let coordonnées = [[0,0]]
+    let table = new Array(n).fill(null).map(() => []);
 
-    for (let i=0; i<3; i++) {
-        coordonnées.push()
+    let value = 20151125
+
+    for (let i = 0; i<sequence.length; i++) {
+        table[sequence[i][0]][sequence[i][1]] = value
+        value = (value*252533)%33554393
+
     }
-    
-    console.log(coordonnées)
 
-    // for (let i = 1; i<3; i++) {
-
-    //     console.log(x,y)
-
-    //     // table[x].push(table[0][0])
-
-        
-    // }
-
+    let result1 = table[row-1][column-1]
     // console.table(table)
-    
-    return [0,0]
+
+    return [result1,0]
 }
 
 module.exports = {
