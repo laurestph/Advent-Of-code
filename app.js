@@ -14,7 +14,11 @@ const {
   year2015day10,
   year2015day11,
   year2015day12,
+
+  year2015day25,
+
   year2022day1,
+  year2022day2,
 } = require('./aoc/function/allFunctions');
 
 // Définition du répertoire des vues
@@ -68,16 +72,22 @@ app.get('/:year/:day', (req, res) => {
         case "12":
           [result1, result2]  = year2015day12(year, day)
           break;
+
+        case "25":
+          [result1, result2]  = year2015day25(year, day)
+          break;
       }
       break;
-      case "2022":
-        switch(day){
-          case "1":
-            [result1, result2]  = year2022day1(year, day)
-            break;
-        }
-        break;
-  
+    case "2022":
+      switch(day){
+        case "1":
+          [result1, result2]  = year2022day1(year, day)
+          break;
+        case "2":
+          [result1, result2]  = year2022day2(year, day)
+          break;
+      }
+      break;
   }
 
   res.render('aoc', {

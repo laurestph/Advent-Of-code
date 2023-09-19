@@ -11,10 +11,15 @@ const days2015 = {
     year2015day10: require('./2015/10').year2015day10,
     year2015day11: require('./2015/11').year2015day11,
     year2015day12: require('./2015/12').year2015day12,
+    
+    year2015day25: require('./2015/25').year2015day25,
 };
 
 const days2022 = {
     year2022day1: require('./2022/1').year2022day1,
+    year2022day2: require('./2022/2').year2022day2,
+
+
 };
 
 module.exports = { ...days2015, ...days2022};
